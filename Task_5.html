@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<title>Task_5</title>
+		<meta charset="utf-8"/>		
+	</head>
+	<body>
+        <p>Empty Emlements:It means no closing tags</p>
+        <img src="https://qph.fs.quoracdn.net/main-qimg-18f500eba03c48ea7c2591af38f67a93" alt="Beautiful Women in Red saree" height=300px>
+        <p>To get multi media infromation when you what to show their is one semantic tag is Figure inside a figure we can put any multi
+            media object(image,videos).
+        </p>
+        <figure>
+            <img src="https://qph.fs.quoracdn.net/main-qimg-18f500eba03c48ea7c2591af38f67a93" alt="Beautiful women in Red saree" width=300px>
+            <img src="https://qph.fs.quoracdn.net/main-qimg-18f500eba03c48ea7c2591af38f67a93" alt="Beautiful women in Red saree" width=300px>
+            <img src="https://qph.fs.quoracdn.net/main-qimg-18f500eba03c48ea7c2591af38f67a93" alt="Beautiful women in Red saree" width=300px>
+            <img src="https://qph.fs.quoracdn.net/main-qimg-18f500eba03c48ea7c2591af38f67a93" alt="Beautiful women in Red saree" width=300px>
+            <figcaption>Red saree</figcaption>
+        
+        </figure>
+<pre>Two differences
+    1.figure
+    2.image
+    when we use figure we accces entire multi media object it can be a image or audio or video and it contian a caption below
+        difference b/t alt and figcaption is
+            alt helpful when img itself not being display
+            figcaption give some other particular information or <strong>equation</strong> when you want to specify.
+        </pre>
+    <div style="background-image: url('New folder/wall.jpg')">
+        <pre>            a 
+            b 
+            c 
+            d 
+            e 
+            f 
+            g 
+            h 
+            i 
+            j 
+            k 
+            l 
+            m
+        </pre>
+    </div>
+    <p>
+      img is purely for decorating purpose it doesn't convey any information in such cases just choose a bg img 
+    </p>
+    <hr style="color:red">
+    <h3> Video and audio</h3>
+    <p>use plugins such as flash or<strong> adobe flash<strong> or elc..</p>
+    <p> to support audios and videos use adobe flash</p>
+    <pre>
+        Flash is heavy weight for a browser to particular run that plugin and some problems faced.earlier people using embed tag
+        for multi media support
+        one more tag like silverlite stopped after version6 
+        Html5 started to supprt all multi types of data
+    </pre>
+    <hr style="color:red">
+    <pre>
+        1.controls:added the pause and play button 
+            different types of bowser can display different types of output controls
+        2.preload:
+        3.autoplay:automatically paly video or audio-not working in chrome
+        4.loop:
+    iframe:next session
+        
+    </pre>
+    <audio src="New folder/leader.mp3" controls preload="metadata" loop></audio><br>
+    <!-- <iframe src="New folder/leader.mp3" allow="autoplay" style="display:block"></iframe> -->
+    <video src="New folder/joru.mp4" height="300px" width="400px" controls preload="auto" loop poster="New folder/wall.jpg"></video>
+    <br>
+    <audio controls>
+        <source src="New folder/leader.mp3" type="audio/mp3">
+        <source src="New folder/leader.ogg" type="audio/ogg">
+    </audio>
+  <video controls height="400px" width="400px">
+            <source src="New folder/joru.mp4" type="video/mp4">
+            <source src="New folder/joru.ogg" type="vidio/ogg">
+            <object data="New folder/one.swf" type="application/x-shockwave-flash"></object> 
+     </video>  <br>
+     <div >
+        <video id="videoPlayer" ontimeupdate="updateProgress()" controls height="400px" width="400px">
+            <source src="New folder/joru.mp4" type="video/mp4">
+        </video><br>
+        <button onclick="play()">Play</button>
+        <button onclick="pause()">Pause</button>
+        <button onclick="stop()">stop</button>
+    </div>
+    <div id="progressbar"></div>
+    <script>
+            var video=document.getElementById('videoPlayer');
+            function play(){
+                video.play();
+            }
+            function pause(){
+                video.pause();
+            }
+            function stop(){
+                video.pause();
+                video.currentTime=0;
+            }
+            function updateProgress(){
+                var progressbar=document.getElementById('progressbar');
+                progressbar.innerHTML=Math.round((video.currentTime*100)/video.duration);
+            }
+        </script>
+    </body>
+</html>
