@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<title>Task_7</title>
+		<meta charset="utf-8"/>		
+    </head>
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+    </style>
+	<body>
+        <input type="text" name="lastname" id="fs" form="registrion-form">
+        <h1> Registration Form</h1>
+        <form action="New folder/reg.php" method="GET" id="registrion-form">
+            <fieldset>
+                <legend>Reg</legend>
+                <label for="name">Name</label>
+                <input placeholder="Name" type="text" name="firstname" id="name" value="">
+                <input type="number" name="age" id="" min="18" max="60" step="2">
+                <input type="radio" name="gender" id="male"><label for="male">Male</label>
+                <input type="radio" name="gender" id="female"><label for="female">Female</label>
+                <input type="checkbox" name="language" id="telugu" value="telugu">telugu
+                <input type="checkbox" name="language" id="english" value="english">english
+                <input type="checkbox" name="language" id="german" value="german">german
+                url<input type="url" name="url" id="">
+            </fieldset>
+            <div>
+                <label for="address">Address</label>
+                <textarea name="address" id="" cols="30" rows="10"></textarea>
+            </div>
+            <div>
+                <label for="type">Type</label>
+                <select name="type" id="">
+                    <optgroup label="Teck">
+                        <option value="1">user</option>
+                        <option value="2" ></option>
+                        <option value="3"></option>
+                    </optgroup>
+                    <optgroup label="Non-eck">
+                        <option value="user">user</option>
+                        <option value="admin"></option>
+                        <option value="accountant"></option>
+                     </optgroup>
+                </select>
+            </div>
+            <input type="submit" value="Register">
+            <button type="submit">Registration</button>
+        </form>
+    </body>
+</html>
